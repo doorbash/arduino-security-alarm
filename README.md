@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/doorbash/arduino-security-alarm/dev/diagram.png" />
+
 ### Config:
 
 Edit `<arduino ide directory>/hardware/arduino/avr/cores/arduino/HardwareSerial.h`
