@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/doorbash/arduino-security-alarm/dev/diagram.png" />
+<img src="https://raw.githubusercontent.com/doorbash/arduino-security-alarm/master/diagram.png" />
 
 ### Config:
 
