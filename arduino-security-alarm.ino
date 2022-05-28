@@ -10,7 +10,7 @@ void zzz() {
 #ifdef DEBUG_MODE
   delay(1000);
 #endif
-  attachInterrupt(digitalPinToInterrupt(WAKEUP_PIN), wakeUp, LOW);
+  attachInterrupt(digitalPinToInterrupt(WAKEUP_PIN), wakeUp, RISING);
   LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_OFF);
   detachInterrupt(digitalPinToInterrupt(WAKEUP_PIN));
 }
@@ -23,8 +23,7 @@ void wakeUp() {
 void setup() {
   pinMode(WAKEUP_PIN, INPUT);
   pinMode(MOSFET_PIN, OUTPUT);
-
-  digitalWrite(WAKEUP_PIN, HIGH);
+  
   digitalWrite(MOSFET_PIN, LOW);
 
   serial.init();
