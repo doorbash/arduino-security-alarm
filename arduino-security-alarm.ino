@@ -23,7 +23,7 @@ void wakeUp() {
 void setup() {
   pinMode(WAKEUP_PIN, INPUT);
   pinMode(MOSFET_PIN, OUTPUT);
-  
+
   digitalWrite(MOSFET_PIN, LOW);
 
   serial.init();
@@ -55,13 +55,18 @@ void loop() {
 
   SerialHandler::debug("Hello There!");
   digitalWrite(MOSFET_PIN, HIGH);
-  delay(20000);
+
+  delay(5000);
 
   serial.command("ATE0");
   delay(500);
 
-  serial.command("ATD%s;", PHONE_NUMBER);
-  delay(20000);
+  for (int i = 0; i < 4; i++) {
+    serial.command("ATD%s;", PHONE_NUMBER);
+    delay(5000);
+  }
+
+  delay(15000);
 
   serial.command("ATH");
   delay(500);
