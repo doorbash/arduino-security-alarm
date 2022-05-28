@@ -17,8 +17,6 @@ class SerialHandler {
     int bufferIndex;
 
   public:
-    char gnsinf[200];
-
     void init();
     void send(char *text);
     void receive();

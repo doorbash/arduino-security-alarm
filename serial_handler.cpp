@@ -34,9 +34,6 @@ void SerialHandler::receive() {
     if (c == '\n' || bufferIndex >= MAX_BUFFER_SIZE - 1) {
       buffer[bufferIndex] = 0;
       bufferIndex = 0;
-      if (strstr(buffer, "+CGNSINF") == buffer) {
-        strcpy(gnsinf, buffer);
-      }
 #ifdef DEBUG_MODE
       Serial.print("> ");
       Serial.println(buffer);
