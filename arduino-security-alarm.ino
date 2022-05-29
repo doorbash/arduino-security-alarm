@@ -44,7 +44,8 @@ void setup() {
 #endif
 
   ADCSRA = 0;
-  delay(10000);
+
+  LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
 }
 
 void loop() {
@@ -67,9 +68,6 @@ void loop() {
   }
 
   delay(15000);
-
-  serial.command("ATH");
-  delay(500);
 
   digitalWrite(MOSFET_PIN, LOW);
 
