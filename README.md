@@ -37,6 +37,6 @@ Create `config.h`:
 #define SS_RX_PIN 7
 #define SS_TX_PIN 8
 #define WAKEUP_PIN 2
-#define MOSFET_PIN 13
+#define MOSFET_PIN 12
 #define PHONE_NUMBER "+98**********"
 ```
